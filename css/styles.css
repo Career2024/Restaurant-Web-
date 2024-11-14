@@ -5,15 +5,12 @@ body {
     font-family: 'Oxygen', sans-serif;
 }
 
-.navbar, .navbar-expand-lg, .bg-body-tertiary {
+.navbar {
     background-color: #f6b319;
     border-radius: 0;
     border: 0;
 }
 
-nav {
-    background-color: #f6b319;
-    border-radius: 0;
-    border: 0;
 
-}
+
+
