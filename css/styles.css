@@ -33,6 +33,7 @@ body {
     margin-top: 10px;
     margin-bottom: 0;
     line-height: .75;
+    margin: 0;
 }
 .navbar-brand p {
     color: #000;
@@ -56,11 +57,176 @@ a {
     
 }
 
-@media (max-width: 991.98px) {
-    .responsive-image {
-      display: none;
+
+
+ul {
+    position: relative;
+    top: -50px;
+    right: -120px;
+}
+
+.nav-item {
+    text-align: center; /* Center-align the text */
+}
+.nav-link i {
+    position: relative;
+    display: block; /* Make the icon appear above the text */
+    font-size: 2rem; /* Adjust icon size */
+    color: #61122f;
+    margin-right: 5px;
+}
+
+.navbar-collapse {
+    width: 100px;
+}
+
+nav {
+    display: block;
+}
+
+
+
+
+
+
+
+
+/*********** Large Devies Only ***************/
+
+@media (min-width: 1200px) {
+
+    .navbar-brand h1{
+        padding-top: 10px;
+
     }
-  }
+
+}
+
+/*********** Medium Devies Only ***************/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .navbar-toggler {
+        position: relative;
+        top: -40px;
+        padding: 5px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+    
+
+    
+
+}
+
+
+/*********** Small Devies Only ***************/
+
+@media (min-width: 768px) and (max-width: 991x) {
+  
+    .navbar-brand h1{
+        padding-top: 10px;
+        font-size: ;
+
+    }
+    .navbar-brand p {
+        text-transform: uppercase;
+        font-size: .6em;
+        margin-top: 12px;
+    }
+
+    .navbar-brand img {
+        height: 20px;
+        image-rendering: auto;
+    }
+
+    .navbar-brand {
+        left: 10px;
+    }
+
+
+    ul {
+        position: relative;
+        right: -100px;;
+        top: -40px;
+    }
+
+
+
+    .navbar-toggler {
+        position: relative;
+        top: -40px;
+        padding: 5px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+   
+    
+} 
+/*********** Extra Small Devies Only ***************/
+
+@media (max-width: 767px) {
+    .responsive-image {
+        display: none;
+      }
+      .navbar-brand h1 {
+        padding-top: 10px;
+        font-size: 1.3em;
+
+    }
+    .navbar-brand p {
+        text-transform: uppercase;
+        font-size: .6em;
+        margin-top: 12px;
+    }
+
+    .nav-link i {
+        width: 300px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        
+    }
+
+    .navbar-collapse {
+        width: 200px;
+      }
+    
+
+    
+    .navbar-brand {
+        margin-top: 0;
+        margin-right: 0;
+      }
+
+    .Kosher {
+        margin-bottom: 0;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        top: -20px;
+        padding: 5px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+
+  
+
+    ul {
+        position: relative;
+        right: -120px;;
+        top: -40px;
+    }
+
+   
+}
+
+  
+
+    
+  
+
+
 
  
 
