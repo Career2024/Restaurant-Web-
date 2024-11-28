@@ -54,6 +54,8 @@ a {
 .navbar-brand {
     float: right;
     margin-top: 5px;
+
+    
     
 }
 
@@ -62,11 +64,12 @@ a {
 ul {
     position: relative;
     top: -50px;
-    right: -120px;
+    right: -40px;
 }
 
 .nav-item {
     text-align: center; /* Center-align the text */
+    
 }
 .nav-link i {
     position: relative;
@@ -80,9 +83,7 @@ ul {
     width: 100px;
 }
 
-nav {
-    display: block;
-}
+
 
 
 
@@ -109,15 +110,35 @@ nav {
     .navbar-toggler {
         position: relative;
         top: -40px;
+        right: -100px;
         padding: 5px;
         margin-top: 0;
         margin-right: 5px;
     }
     
-
+    .navbar-brand h1 {
+        font-size: 1;
+    }
     
+    .navbar-nav {
+        width: 300px;
+    }
+
+
+
+    ul {
+        position: relative;
+        right: 0;
+        top: -40px;
+        width: 100px;
+    }
+
+ 
+
+   
 
 }
+
 
 
 /*********** Small Devies Only ***************/
@@ -126,7 +147,6 @@ nav {
   
     .navbar-brand h1{
         padding-top: 10px;
-        font-size: ;
 
     }
     .navbar-brand p {
@@ -147,8 +167,9 @@ nav {
 
     ul {
         position: relative;
-        right: -100px;;
+        right: -50px;;
         top: -40px;
+        width: 300px;
     }
 
 
@@ -160,9 +181,44 @@ nav {
         margin-top: 0;
         margin-right: 5px;
     }
+
+
+
+
    
     
 } 
+
+
+@media (min-width: 768px) {
+    .container,.container-md {
+        max-width:100%
+    }
+
+    ul {
+        position: relative;
+        right: 0;
+        top: -40px;
+        width: 300px;
+    }
+
+
+    
+    .navbar-toggler {
+        position: relative;
+        top: -55px;
+        padding: 5px;
+        margin-top: 0;
+        margin-right: 5px;
+        width: 50px;
+    }
+
+    
+
+
+}
+
+
 /*********** Extra Small Devies Only ***************/
 
 @media (max-width: 767px) {
@@ -186,12 +242,6 @@ nav {
         padding-bottom: 0;
         
     }
-
-    .navbar-collapse {
-        width: 200px;
-      }
-    
-
     
     .navbar-brand {
         margin-top: 0;
@@ -210,13 +260,31 @@ nav {
         margin-right: 5px;
     }
 
-  
 
     ul {
         position: relative;
-        right: -120px;;
-        top: -40px;
+        right: 0;
+        top: -20px;
+        width: 300px;
+        
+        
+        
     }
+
+    
+    .container,.container-md, .container-sm {
+        max-width:100%
+    }
+
+    .navbar-collapse {
+        justify-content: right;
+    }
+
+ 
+
+    
+
+
 
    
 }
