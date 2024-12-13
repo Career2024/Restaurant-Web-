@@ -7,19 +7,19 @@ body {
 
 
 
-.navbar-brand img {
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 5px 15px 5px;
-
-}
-
-.Kosher img{
+.Kosher img {
     background-repeat: no-repeat;
     width: 36px;
     height: 36px;
     margin: 0;
+}
+
+.responsive-image {
+    display: block; /* Show the larger image by default */
+}
+
+.small-logo {
+    display: none; /* Hide the smaller image by default */
 }
 
 
@@ -51,9 +51,13 @@ a {
 
 }
 
+
+
 .navbar-brand {
     float: right;
     margin-top: 5px;
+    display: flex; /* caused the h1 element (restuarant's name) to on 
+    right of the logo rather than on the bottom. */ 
     
 }
 
@@ -73,13 +77,12 @@ ul {
     position: relative;
     display: block; /* Make the icon appear above the text */
     font-size: 2rem; /* Adjust icon size */
-    color: #61122f;
+    color: #951C49;
     margin-right: 5px;
+    
+    
 }
 
-.navbar-collapse {
-    width: 100px;
-}
 
 .display-5 {
     color: black;
@@ -110,7 +113,8 @@ ul {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    padding-bottom: 0;
+    padding-bottom: 6px;
+    padding-top: 6px;
     margin-bottom: 0;
 }
 
@@ -120,9 +124,56 @@ ul {
 }
 
 
+.row, .container-fluid, .py-5{
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 !important;
+    border-radius: 15px;
+
+}
 
 
 
+#menu-tile, #specials-tile, #map-tile {
+
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+
+    box-shadow: 0 1px 5px 1px #cccccc;
+
+}
+
+#menu-tile {
+    background: url('../css/images/menu-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#specials-tile {
+    background: url('../css/images/specials-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: .8;
+}
 
 
 
@@ -139,14 +190,16 @@ ul {
         padding: 0 !important;
     }
 
-    .btn, .btn-primary, #xs-deliver {
-        display: none;
 
+    .container {
+        width: 1170px;
     }
 
+    .btn, .btn-primary, #xs-deliver {
+        display: none;
+    }
 
     
-
 
 }
 
@@ -162,7 +215,9 @@ ul {
         right: -100px;
         padding: 5px;
         margin-top: 0;
-        margin-right: 5px;
+        margin-right: 15px;
+        float: right;
+
     }
     
     .navbar-brand h1 {
@@ -186,11 +241,23 @@ ul {
         padding: 0 !important;
     }
 
+
+
     .btn, .btn-primary, #xs-deliver {
         display: none;
-
     }
 
+    .responsive-image {
+        display: none;
+    }
+
+    .small-logo {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 5px 5px 5px 0;
+       
+    }
    
 
 }
@@ -199,7 +266,7 @@ ul {
 
 /*********** Small Devies Only ***************/
 
-@media (min-width: 768px) and (max-width: 991x) {
+@media (min-width: 768px) and (max-width: 991px) {
   
     .navbar-brand h1{
         padding-top: 10px;
@@ -229,19 +296,13 @@ ul {
     }
 
 
-
     .navbar-toggler {
         position: relative;
         top: -40px;
         padding: 5px;
         margin-top: 0;
-        margin-right: 5px;
-    }
-
-
-    .btn, .btn-primary, #xs-deliver {
-        display: none;
-
+        margin-right: 15px;
+        margin-bottom: 10px;
     }
 
     .rest {
@@ -249,58 +310,31 @@ ul {
         padding: 0 !important;
     }
 
-    
+    .btn, .btn-primary, #xs-deliver {
+        display: none;
+    }
 
-   
+    .responsive-image {
+        display: none;
+    }
+
     
 } 
 
 
-@media (min-width: 768px) {
-    .container,.container-md {
-        max-width:100%
-    }
-
-    ul {
-        position: relative;
-        right: 0;
-        top: -40px;
-        width: 300px;
-    }
-
-
-    
-    .navbar-toggler {
-        position: relative;
-        top: -55px;
-        padding: 5px;
-        margin-top: 0;
-        margin-right: 5px;
-        width: 50px;
-    }
-
-    .p-5 {
-        padding: 0 !important;
-    }
-    
-    .btn, .btn-primary, #xs-deliver {
-        display: none;
-
-    }
-
-
-}
-
 
 /*********** Extra Small Devies Only ***************/
+
 
 @media (max-width: 767px) {
     .responsive-image {
         display: none;
       }
+
       .navbar-brand h1 {
         padding-top: 10px;
         font-size: 1.3em;
+        width: 100%;
 
     }
     .navbar-brand p {
@@ -344,12 +378,11 @@ ul {
     }
 
     
-    .container,.container-md, .container-sm {
-        max-width:100%
-    }
 
     .navbar-collapse {
         justify-content: right;
+        margin-top: 20px;
+
     }
 
     .p-5 {
@@ -362,15 +395,19 @@ ul {
 
     a, .btn {
         margin: 0;
+        
     }
 
     .btn, .btn-primary {
-        padding-top: 0;
+        display: block;
+        padding-top: 6px;
         margin-left: 20px;
         margin-right: 20px;
+        font-size: 1.3em;
 
        
     }
+
 
     .d-grid, .container, .container-fluid, .py-5 {
         padding-top: 20px !important;
@@ -379,13 +416,28 @@ ul {
         
     }
 
+    .navbar-brand h1 {
+        font-size: 1.3em;
+    }
 
-
-    
-
-
+    .navbar-collapse::after {
+        display: table;
+    }
 
    
+
+   
+}
+
+@media (max-width: 576px) {
+
+    #menu-tile, #specials-tile {
+        width: 360px;
+        margin: 0 auto 15px;
+    }
+
+  
+
 }
 
   
